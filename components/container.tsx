@@ -4,11 +4,7 @@ type Props = {
   children?: ReactNode;
 };
 const Container = ({ children }: Props) => {
-  return (
-    <div className="mx-auto min-h-min max-w-4xl px-8 bg-stone-800">
-      {children}
-    </div>
-  );
+  return <div className="mx-auto min-h-min px-[1vw]">{children}</div>;
 };
 
 export default Container;

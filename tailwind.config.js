@@ -24,8 +24,8 @@ module.exports = {
         "8xl": "6.25rem",
       },
       fontFamily: {
-        myfont: ["IBMPlexMono"],
-        sans: ["IBMPlexMono", "sans-serif"],
+        myfont: ["Acumin"],
+        sans: ["Acumin", "sans-serif"],
       },
     },
   },

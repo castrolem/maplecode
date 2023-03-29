@@ -1,7 +1,8 @@
-import Container from "../components/container";
+import Head from "next/head";
+
+import Separator from "../components/separator";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
-import Head from "next/head";
 import Post from "../interfaces/post";
 
 type Props = {
@@ -14,7 +15,10 @@ export default function Index({ allPosts }: Props) {
       <Head>
         <title>MapleCode - We make sticky experiences</title>
       </Head>
-      <Container></Container>
+      <h1 className="text-[19vw] tracking-[-0.5vw] text-stone-50 leading-none pt-16 pb-0 mb-0 block">
+        Maple Code
+      </h1>
+      <Separator />
     </Layout>
   );
 }

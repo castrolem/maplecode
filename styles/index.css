@@ -2,73 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  background-color: rgb(180 83 9);
+}
+
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: normal;
   font-weight: 200;
-  src: local(""), url("/fonts/IBMPlexMono-Thin.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Thin.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: italic;
   font-weight: 200;
-  src: local(""), url("/fonts/IBMPlexMono-ThinItalic.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Thin Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Medium.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Medium Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("/fonts/IBMPlexMono-Medium.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Book.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: italic;
   font-weight: 500;
-  src: local(""), url("/fonts/IBMPlexMono-MediumItalic.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Book Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: normal;
   font-weight: 600;
-  src: local(""), url("/fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro SemiBold.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: italic;
   font-weight: 600;
   src: local(""),
-    url("/fonts/IBMPlexMono-SemiBoldItalic.ttf") format("truetype");
+    url("/fonts/Acumin Pro SemiBold Italic.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Bold.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "IBMPlexMono";
+  font-family: "Acumin";
   font-style: italic;
   font-weight: 700;
-  src: local(""), url("/fonts/IBMPlexMono-BoldItalic.ttf") format("truetype");
+  src: local(""), url("/fonts/Acumin Pro Bold Italic.otf") format("truetype");
 }
