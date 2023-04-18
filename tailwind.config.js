@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
+        "accent-1": "#454545",
+        "accent-2": "#FF6000",
+        "accent-3": "#FFA559",
+        "accent-4": "#FFE6C7",
       },
       spacing: {
         28: "7rem",

@@ -8,20 +8,44 @@ type Props = {
 const Posts = ({ posts }: Props) => {
   return (
     <>
-      <section className="pt-8">
-        <div className="grid grid-cols-2 gap-6">
-          <PostPreview {...posts[0]} />
-          <PostPreview {...posts[1]} />
+      <section className="grid gap-[1.5vw] pt-8">
+        <div
+          className="grid gap-[1.5vw]"
+          style={{ gridAutoColumns: "1fr", gridTemplateColumns: "1fr 1fr" }}
+        >
+          <PostPreview
+            {...posts[0]}
+            style={{
+              gridArea: "span 1/span 2/span 1/span 2",
+            }}
+          />
+          <PostPreview
+            {...posts[1]}
+            style={{
+              gridArea: "span 1/span 1/span 1/span 1",
+            }}
+          />
+          <PostPreview
+            {...posts[0]}
+            style={{
+              gridArea: "span 1/span 1/span 1/span 1",
+            }}
+          />
         </div>
-      </section>
-      <section className="pt-8">
-        <div className="grid grid-cols-1 gap-6">
-          <PostPreview {...posts[0]} />
-        </div>
-      </section>
-      <section className="pt-8">
-        <div className="grid grid-cols-4 gap-6">
-          <PostPreview {...posts[0]} />
+        <div
+          className="grid gap-[1.5vw]"
+          style={{
+            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            gridTemplateRows: "auto",
+          }}
+        >
+          <PostPreview
+            {...posts[0]}
+            className="h-auto"
+            style={{
+              gridArea: "span 1/span 1/span 1/span 1",
+            }}
+          />
           <PostPreview
             {...posts[1]}
             className={
@@ -31,7 +55,11 @@ const Posts = ({ posts }: Props) => {
               gridArea: "span 2/span 3/span 2/span 3",
             }}
           />
-          <PostPreview {...posts[2]} />
+          <PostPreview
+            {...posts[2]}
+            className="h-auto"
+            style={{ gridArea: "span 1/span 1/span 1/span 1" }}
+          />
         </div>
       </section>
     </>
