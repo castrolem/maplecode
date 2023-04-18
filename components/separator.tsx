@@ -4,7 +4,7 @@ const Separator = () => {
   return (
     <div
       className={classNames(
-        "flex flex-1 items-center justify-center h-0.5 bg-stone-50"
+        "flex h-0.5 flex-1 items-center justify-center bg-stone-50"
       )}
     />
   );
