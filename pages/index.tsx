@@ -6,7 +6,6 @@ import Posts from "../components/posts";
 import { getAllPosts } from "../lib/api";
 import Post from "../interfaces/post";
 import Footer from "../components/footer";
-import { Business } from "../components/business";
 
 type Props = {
   allPosts: Post[];
