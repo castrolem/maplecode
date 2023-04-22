@@ -12,7 +12,6 @@ type Props = {
   excerpt: string;
   coverImage: string;
   className?: string;
-  style?: any;
 };
 
 const PostPreview = ({
@@ -22,14 +21,12 @@ const PostPreview = ({
   slug,
   coverImage,
   className,
-  style = {},
 }: Props) => {
   return (
     <Link
       as={`/posts/${slug}`}
       href="/posts/[slug]"
       className={classNames("group block h-[90vh]", className)}
-      style={style}
     >
       <div
         className="relative mb-3 mr-6 h-full max-h-[90vh] w-full overflow-hidden rounded-lg border border-gray-100 transition duration-700 ease-out sm:mb-0 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-hover:shadow"
