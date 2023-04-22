@@ -3,7 +3,7 @@ import Separator from "./separator";
 const Footer = () => {
   return (
     <div className="min-h-48 border-t-stone-300">
-      <h3 className="mb-16 block pb-0 pt-16 text-6xl text-stone-50">
+      <h3 className="mb-16 block pb-0 pt-16 text-6xl leading-snug text-stone-50 lg:leading-normal">
         MapleCode is an independent studio composed of multiple full-stack
         developers and designers creating custom marketing websites for clients
         across industries. We work with marketing teams, brand designers, and
