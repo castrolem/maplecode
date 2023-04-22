@@ -19,13 +19,13 @@ const Posts = ({ posts }: Props) => {
         </div>
         <div
           className={classNames(
-            "grid gap-y-[1.5vw] md:gap-[1.5vw]",
+            "grid gap-y-[1.5vw] lg:gap-[1.5vw]",
             styles.grid4Columns
           )}
         >
           <PostPreview
             {...posts[0]}
-            className={classNames("md:h-auto", styles.details)}
+            className={classNames("lg:h-auto", styles.details)}
           />
           <PostPreview
             {...posts[1]}
@@ -36,7 +36,7 @@ const Posts = ({ posts }: Props) => {
           />
           <PostPreview
             {...posts[2]}
-            className={classNames("md:h-auto", styles.details)}
+            className={classNames("lg:h-auto", styles.details)}
           />
         </div>
       </section>
