@@ -1,11 +1,9 @@
-import type Author from "./author";
-
 type PostType = {
   slug: string;
   title: string;
   date: string;
   coverImage: string;
-  author: Author;
+  coverColor: string;
   excerpt: string;
   ogImage: {
     url: string;

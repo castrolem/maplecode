@@ -12,6 +12,7 @@ type Props = {
   slug: string;
   excerpt: string;
   coverImage: string;
+  coverColor: string;
   className?: string;
 };
 
@@ -21,28 +22,39 @@ const PostPreview = ({
   date,
   slug,
   coverImage,
+  coverColor,
   className,
 }: Props) => {
   return (
     <Link
       as={`/posts/${slug}`}
       href="/posts/[slug]"
-      className={classNames("group block lg:h-[90vh]", className)}
+      className={classNames("group block xl:h-[90vh]", className)}
     >
       <div
-        className="relative mb-3 mr-6 flex h-full max-h-[90vh] w-full flex-col-reverse overflow-hidden transition duration-700 ease-out sm:mb-0 lg:rounded-lg lg:border lg:border-gray-100 lg:group-hover:translate-x-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-hover:shadow"
+        className="relative mb-3 mr-6 flex h-full max-h-[90vh] w-full flex-col-reverse overflow-hidden transition duration-700 ease-out sm:mb-0 xl:rounded-2xl xl:border xl:border-gray-100 xl:group-hover:translate-x-0 xl:group-hover:translate-y-0 xl:group-hover:opacity-100 xl:group-hover:shadow"
         key={`${title}-${date}`}
       >
-        <div className="opacity-1 left-0 top-0 z-10 flex max-w-full items-center justify-center transition duration-700 ease-out lg:absolute lg:h-full lg:w-full lg:bg-accent-4 lg:blur-0 lg:group-hover:opacity-25 lg:group-hover:blur-sm">
+        <div
+          className={classNames(
+            "opacity-1 left-0 top-0 z-10 flex max-w-full items-center justify-center transition duration-700 ease-out xl:absolute xl:h-full xl:w-full xl:blur-0 xl:group-hover:opacity-25 xl:group-hover:blur-sm",
+            getBackgroundColors(coverColor)
+          )}
+        >
           <Image
-            className="relative"
+            className="relative w-[75%] rounded-xl"
             src={coverImage}
-            width={800}
-            height={600}
+            width={1200}
+            height={800}
             alt={title}
           />
         </div>
-        <div className="left-0 top-0 z-20 transform py-8 transition duration-700 ease-out lg:absolute lg:h-full lg:w-full lg:-translate-y-24 lg:bg-accent-1 lg:bg-transparent lg:bg-opacity-50 lg:p-8 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+        <div
+          className={classNames(
+            "left-0 top-0 z-20 transform py-8 transition duration-700 ease-out xl:absolute xl:h-full xl:w-full xl:-translate-y-24 xl:bg-transparent xl:bg-opacity-50 xl:p-8 xl:opacity-0 xl:group-hover:translate-y-0 xl:group-hover:opacity-100",
+            getBackgroundColors(coverColor)
+          )}
+        >
           <h3 className="mb-0 text-xl leading-snug text-white">{title}</h3>
           <FormattedDate date={date} />
           {excerpt && <p className="my-4 text-sm text-white">{excerpt}</p>}
@@ -60,5 +72,17 @@ const PostPreview = ({
     </Link>
   );
 };
+
+function getBackgroundColors(color: string) {
+  return {
+    ["accent-1"]: "xl:bg-accent-1",
+    ["accent-2"]: "xl:bg-accent-2",
+    ["accent-3"]: "xl:bg-accent-3",
+    ["accent-4"]: "xl:bg-accent-4",
+    ["accent-5"]: "xl:bg-accent-5",
+    ["accent-6"]: "xl:bg-accent-6",
+    ["accent-7"]: "xl:bg-accent-7",
+  }[color];
+}
 
 export default PostPreview;
